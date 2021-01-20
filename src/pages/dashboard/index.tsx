@@ -8,10 +8,9 @@ import useUser from "src/hooks/useUser";
 interface Props {}
 
 const Dashboard: React.FC<Props> = () => {
-  const { loggedOut, mutate } = useUser();
+  const { loggedOut } = useUser();
 
   React.useEffect(() => {
-    mutate();
     if (loggedOut) {
       Router.replace("/");
     }

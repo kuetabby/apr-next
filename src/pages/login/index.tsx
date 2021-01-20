@@ -9,13 +9,13 @@ import useUser from "src/hooks/useUser";
 interface Props {}
 
 const Login: React.FC<Props> = () => {
-  const { user } = useUser();
+  const { data } = useUser();
 
   React.useEffect(() => {
-    if (user) {
+    if (data) {
       Router.replace("/dashboard");
     }
-  }, [user]);
+  }, [data]);
 
   return (
     <div className="w-full h-full">
