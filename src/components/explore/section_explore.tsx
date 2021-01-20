@@ -37,6 +37,7 @@ export const SectionExplore: React.FC<Props> = () => {
 
   const default_img_url = `https://imgsrv.voi.id/-Rs68hmfCJCfwrs8m-HzEzeatUa3kRNAIYffkzcTDLI/auto/1200/675/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy8zNjIzN2QyNy1kZWQ1LTRjMzMtYTM4Zi02Y2M1ZWNlNmFiYWMvMjAyMDA1MTAwNzQyLW1haW4uY3JvcHBlZF8xNTg5MDcxMzk2LmpwZw.jpg`;
 
+  const isLoading = !data && !error;
   const getAllUser: User = data && data.getAllUser;
 
   if (error) {
@@ -53,8 +54,8 @@ export const SectionExplore: React.FC<Props> = () => {
         <div className="my-2 mx-auto">
           <h2 className="text-3xl font-semibold">Explore</h2>
         </div>
-        {!data ? (
-          <div className="h-screen w-full m-auto flex justify-center">
+        {isLoading ? (
+          <div className="h-screen w-full m-auto flex justify-center items-center">
             <p className="animate-bounce text-center h-1/5 text-2xl">
               Processing...
             </p>
