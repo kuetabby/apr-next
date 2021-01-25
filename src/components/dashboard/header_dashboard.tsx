@@ -25,7 +25,7 @@ export const HeaderDashboard: React.FC<Props> = () => {
 
   const user: User = data && data.getUser;
 
-  const default_img_url = `https://imgsrv.voi.id/-Rs68hmfCJCfwrs8m-HzEzeatUa3kRNAIYffkzcTDLI/auto/1200/675/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy8zNjIzN2QyNy1kZWQ1LTRjMzMtYTM4Zi02Y2M1ZWNlNmFiYWMvMjAyMDA1MTAwNzQyLW1haW4uY3JvcHBlZF8xNTg5MDcxMzk2LmpwZw.jpg`;
+  const default_img_url = String(process.env.NEXT_PUBLIC_DEFAULT_IMG);
 
   return (
     <header className="w-full fixed z-10 top-0 md:px-3 shadow-lg">
