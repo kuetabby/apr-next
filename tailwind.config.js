@@ -1,8 +1,9 @@
 module.exports = {
   purge: ['./pages/**/*.tsx', './components/**/*.tsx'],
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     theme: {
+      typography: (theme) => ({}),
       // colors: {
       //   gray: colors.coolGray,
       //   blue: colors.lightBlue,
@@ -37,5 +38,5 @@ module.exports = {
       textOpacity: ['dark']
     }
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }
