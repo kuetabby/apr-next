@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import {
   HeaderHomePage,
   SectionHomePage,
@@ -13,7 +12,6 @@ export default function Home() {
         <title>Apresiasi</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <HeaderHomePage />
       <SectionHomePage />
       <FooterHomePage />

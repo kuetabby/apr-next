@@ -4,6 +4,7 @@ import "../../styles/globals.css";
 import { useEffect } from "react";
 import type { AppProps /*, AppContext */ } from "next/app";
 import Head from "next/head";
+import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -52,7 +53,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         {/* <link rel="apple-touch-icon" href="/apple-icon.png"></link> */}
         <meta name="theme-color" content="#317EFB" />
       </Head>
-      <Component {...pageProps} />;
+      <ThemeProvider attribute="class">
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }
