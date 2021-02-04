@@ -61,7 +61,7 @@ export const SectionLogin: React.FC<Props> = () => {
         <span className="text-md my-2">&nbsp;With&nbsp;</span>
         <div className="h-52 w-full px-12 flex justify-center items-center">
           <GoogleLogin
-            clientId="669952821661-60nv9e80bpob92ijcjd60qdd243h5kr5.apps.googleusercontent.com"
+            clientId={String(process.env.NEXT_PUBLIC_GOOGLE_CLIENT)}
             render={(renderProps: {
               onClick: () => void;
               disabled?: boolean | undefined;
